@@ -2,7 +2,7 @@ const getGreeting = function() {
   return 'Hello World!';
 };
 
-var getNamedGreeting = function(name) {
+const getNamedGreeting = function(name) {
   return 'Hello, ' + name + '!';
 }
 
