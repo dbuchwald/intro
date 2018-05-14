@@ -4,9 +4,9 @@ const getGreeting = function() {
 
 const getNamedGreeting = function(name) {
   return 'Hello, ' + name + '!';
-}
+};
 
 module.exports = {
   getGreeting: getGreeting,
   getNamedGreeting: getNamedGreeting
-}
+};
