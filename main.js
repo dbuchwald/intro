@@ -6,5 +6,7 @@ var getNamedGreeting = function() {
   return '';
 }
 
-module.exports.getGreeting = getGreeting;
-module.exports.getNamedGreeting = getNamedGreeting;
+module.exports = {
+  getGreeting: getGreeting,
+  getNamedGreeting: getNamedGreeting
+}
