@@ -2,8 +2,8 @@ var getGreeting = function() {
   return 'Hello World!';
 };
 
-var getNamedGreeting = function() {
-  return '';
+var getNamedGreeting = function(name) {
+  return 'Hello, ' + name + '!';
 }
 
 module.exports.getGreeting = getGreeting;
