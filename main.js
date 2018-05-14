@@ -1,4 +1,4 @@
-var getGreeting = function() {
+const getGreeting = function() {
   return 'Hello World!';
 };
 
