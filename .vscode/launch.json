@@ -1,24 +1,20 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest All",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--runInBand", "--coverage"],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
+      "name": "Node Basic - Run the main program",
+      "cwd": "${workspaceFolder}/node_basic",
+      "program": "${workspaceFolder}/node_basic/main.js"
     },
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest Current File",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["${relativeFile}", "--coverage"],
+      "name": "Node Basic - Run all Jest tests",
+      "program": "${workspaceFolder}/node_basic/node_modules/jest/bin/jest",
+      "cwd": "${workspaceFolder}/node_basic",
+      "args": ["--runInBand", "--coverage"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }
