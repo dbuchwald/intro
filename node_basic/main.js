@@ -4,10 +4,13 @@ const getGreeting = function() {
 
 const getNamedGreeting = function(name) {
   return 'Hello, ' + name + '!';
-}
+};
 
 console.log('Standard greeting (no parameters): ' + getGreeting());
 console.log('Parameterized greeting with parameter "Node": ' + getNamedGreeting('Node'));
 
-module.exports.getGreeting = getGreeting;
-module.exports.getNamedGreeting = getNamedGreeting;
+module.exports = {
+  getGreeting: getGreeting,
+  getNamedGreeting: getNamedGreeting
+};
+
