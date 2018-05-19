@@ -17,6 +17,16 @@
       "args": ["--runInBand", "--coverage"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Redux Basic - Run all Jest tests",
+      "program": "${workspaceFolder}/redux_basic/node_modules/jest/bin/jest",
+      "cwd": "${workspaceFolder}/redux_basic",
+      "args": ["--runInBand", "--coverage"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
