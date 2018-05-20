@@ -17,6 +17,36 @@
       "args": ["--runInBand", "--coverage"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel Basic - Run the main program",
+      "cwd": "${workspaceFolder}/babel_basic",
+      "program": "${workspaceFolder}/babel_basic/dest/main.js",
+      "preLaunchTask": "build",
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceRoot}/babel_basic/desc/**.js"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel Basic - Run all Jest tests",
+      "cwd": "${workspaceFolder}/babel_basic",
+      "preLaunchTask": "build",
+      "outFiles": [
+        "${workspaceRoot}/lib/**.js"
+      ],
+      "program": "${workspaceFolder}/babel_basic/node_modules/jest/bin/jest",
+      "args": ["--runInBand", "--coverage"],
+      "sourceMaps": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
