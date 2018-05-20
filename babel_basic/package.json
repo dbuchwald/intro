@@ -2,7 +2,7 @@
   "name": "babel_tutorial",
   "version": "1.0.0",
   "description": "Introduction to Babel ES6",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "jest --coverage",
     "build": "babel src -d dest -s",
@@ -17,5 +17,8 @@
     "eslint": "^4.19.1",
     "eslint-plugin-jest": "^21.15.1",
     "jest": "^22.4.3"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["dest/"]
   }
 }
