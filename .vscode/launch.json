@@ -27,7 +27,7 @@
       "preLaunchTask": "build",
       "sourceMaps": true,
       "outFiles": [
-        "${workspaceRoot}/babel_basic/dest/**.js"
+        "${workspaceFolder}/babel_basic/dest/**.js"
       ]
     },
     {
@@ -35,12 +35,7 @@
       "request": "launch",
       "name": "Babel Basic - Run all Jest tests",
       "cwd": "${workspaceFolder}/babel_basic",
-      "program": "${workspaceFolder}/babel_basic/node_modules/jest/bin/jest.js",
-      "preLaunchTask": "build",
-      "sourceMaps": true,
-      "outFiles": [
-        "${workspaceRoot}/babel_basic/dest/**.js"
-      ],
+      "program": "${workspaceFolder}/babel_basic/node_modules/.bin/jest",
       "args": ["--runInBand"]
     }
   ]

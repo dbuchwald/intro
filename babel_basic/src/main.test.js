@@ -1,4 +1,4 @@
-const { getGreeting, getNamedGreeting } = require("./main");
+import { getGreeting, getNamedGreeting } from './main';
 
 test('getGreeting function should return valid greeting', () => {
   const greeting = getGreeting();
