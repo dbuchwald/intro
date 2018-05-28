@@ -41,6 +41,29 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Babel Node Basic - Run the main program",
+      "cwd": "${workspaceFolder}/babel_basic",
+      "program": "${workspaceFolder}/babel_basic/src/main.js",
+      "runtimeExecutable": "${workspaceFolder}/babel_basic/node_modules/.bin/babel-node",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/babel_basic/node_modules/.bin/babel-node.cmd"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel Node Basic - Run all Jest tests",
+      "cwd": "${workspaceFolder}/babel_basic",
+      "program": "${workspaceFolder}/babel_basic/node_modules/jest/bin/jest",
+      "args": ["--runInBand", "--coverage"],
+      "runtimeExecutable": "${workspaceFolder}/babel_basic/node_modules/.bin/babel-node",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/babel_basic/node_modules/.bin/babel-node.cmd"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Redux Basic - Run all Jest tests",
       "program": "${workspaceFolder}/redux_basic/node_modules/jest/bin/jest",
       "cwd": "${workspaceFolder}/redux_basic",
