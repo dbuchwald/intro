@@ -1,0 +1,28 @@
+{
+  "name": "babel_tutorial",
+  "version": "1.0.0",
+  "description": "Introduction to Babel ES6",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "babel src -d dest -s",
+    "start": "babel-node src/main.js"
+  },
+  "author": "Dawid Buchwald",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-jest": "^23.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-jest": "^21.15.1",
+    "jest": "^22.4.3"
+  },
+  "jest": {
+    "roots": [
+      "src/"
+    ]
+  }
+}
