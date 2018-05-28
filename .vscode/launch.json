@@ -21,6 +21,27 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Babel Mini - Run the main program",
+      "cwd": "${workspaceFolder}/babel_mini",
+      "program": "${workspaceFolder}/babel_mini/main.js",
+      "runtimeExecutable": "${workspaceFolder}/babel_mini/node_modules/.bin/babel-node",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/babel_mini/node_modules/.bin/babel-node.cmd"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel Mini - Run all Jest tests",
+      "program": "${workspaceFolder}/babel_mini/node_modules/jest/bin/jest",
+      "cwd": "${workspaceFolder}/babel_mini",
+      "args": ["--runInBand", "--coverage"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Babel Basic - Run the main program",
       "cwd": "${workspaceFolder}/babel_basic",
       "program": "${workspaceFolder}/babel_basic/src/main.js",

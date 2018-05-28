@@ -1,0 +1,21 @@
+{
+  "name": "babel_mini",
+  "version": "1.0.0",
+  "description": "Minimal ES6 project using Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "babel-node main.js"
+  },
+  "keywords": [],
+  "author": "Dawid Buchwald",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-jest": "^21.17.0",
+    "jest": "^23.0.1"
+  }
+}
