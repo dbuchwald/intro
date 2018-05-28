@@ -35,8 +35,8 @@
       "request": "launch",
       "name": "Babel Basic - Run all Jest tests",
       "cwd": "${workspaceFolder}/babel_basic",
-      "program": "${workspaceFolder}/babel_basic/node_modules/.bin/jest",
-      "args": ["--runInBand"]
+      "program": "${workspaceFolder}/babel_basic/node_modules/jest/bin/jest",
+      "args": ["--runInBand", "--coverage"]
     }
   ]
 }
