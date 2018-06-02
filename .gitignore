@@ -1,5 +1,5 @@
 node_modules/
 coverage/
 dest/
-dist/bundle.js
+bundle.js
 .DS_Store
