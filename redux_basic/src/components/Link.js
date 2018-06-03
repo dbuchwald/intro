@@ -1,21 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Button } from 'react-bootstrap'
 
 const Link = ({ active, children, onClick }) => {
   if (active) {
-    return <span>{children}</span>
+    return <Button active>{children}</Button>
   }
 
   return (
-    <a
-      href=""
+    <Button
       onClick={e => {
         e.preventDefault()
         onClick()
       }}
     >
       {children}
-    </a>
+    </Button>
   )
 }
 
