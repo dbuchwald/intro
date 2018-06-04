@@ -24,6 +24,7 @@ let AddTodo = ({ dispatch }) => {
               dispatch(addTodo(inputHeader.value, inputDescription.value))
               inputHeader.value = ''
               inputDescription.value = ''
+              inputHeader.focus()
             }}>
             <FormGroup controlId='todo'>
               <Col componentClass={ControlLabel} sm={2}>
