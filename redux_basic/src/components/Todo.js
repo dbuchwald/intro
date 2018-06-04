@@ -4,7 +4,8 @@ import { ListGroupItem, Glyphicon } from 'react-bootstrap';
 
 const Todo = ({ onClick, completed, text }) => (
   <ListGroupItem onClick={onClick}>
-    <Glyphicon glyph={completed ? 'ok' : 'remove'}/>
+    <Glyphicon style={{color: completed ? '#6ed26e' : '#f27e7e'}} 
+               glyph={completed ? 'ok' : 'remove'}/>
     &ensp;
     {text}
   </ListGroupItem>
