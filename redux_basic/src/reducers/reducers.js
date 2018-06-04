@@ -24,7 +24,8 @@ export const todosReduce = (state = [],
       return [ 
                ...state, 
                {
-                 text: action.text,
+                 header: action.header,
+                 description: action.description,
                  completed: false
                }
              ]; 

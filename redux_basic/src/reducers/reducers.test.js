@@ -62,9 +62,9 @@ test('todosReduce should return empty list as default initial state', () => {
 });
 
 test('todosReduce should handle toggle action correctly', () => {
-  const initialState = [ {text: 'SampleTodo', completed: false} ];
+  const initialState = [ {header: 'sample header', description: 'sample description', completed: false} ];
   const action = toggleTodo(0);
-  const expectedState = [ {text: 'SampleTodo', completed: true} ];
+  const expectedState = [ {header: 'sample header', description: 'sample description', completed: true} ];
 
   const resultingState = todosReduce(initialState, action);
   
@@ -72,11 +72,11 @@ test('todosReduce should handle toggle action correctly', () => {
 });
 
 test('todosReduce should handle toggle action correctly for many items', () => {
-  const initialState = [ {text: 'SampleTodo', completed: false}, 
-                         {text: 'OtherTodo', completed: false} ];
+  const initialState = [ {header: 'sample header', description: 'sample description', completed: false}, 
+                         {header: 'sample header', description: 'sample description', completed: false} ];
   const action = toggleTodo(1);
-  const expectedState = [ {text: 'SampleTodo', completed: false},
-                          {text: 'OtherTodo', completed: true} ];
+  const expectedState = [ {header: 'sample header', description: 'sample description', completed: false},
+                          {header: 'sample header', description: 'sample description', completed: true} ];
 
   const resultingState = todosReduce(initialState, action);
   
@@ -85,8 +85,8 @@ test('todosReduce should handle toggle action correctly for many items', () => {
 
 test('todosReduce should handle add action correctly', () => {
   const initialState = [];
-  const action = addTodo('SampleTodo');
-  const expectedState = [ {text: 'SampleTodo', completed: false} ];
+  const action = addTodo('sample header', 'sample description');
+  const expectedState = [ {header: 'sample header', description: 'sample description', completed: false} ];
 
   const resultingState = todosReduce(initialState, action);
   

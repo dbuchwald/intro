@@ -19,10 +19,12 @@ test('addTodo action should return ADD_TODO action', () => {
 });
 
 test('addTodo action should have correct text', () => {
-  const todoText = "Sample TODO";
-  const action = addTodo(todoText);
+  const todoHeader = "TODO Header"
+  const todoDescription = "Sample TODO description";
+  const action = addTodo(todoHeader, todoDescription);
 
-  expect(action.text).toBe(todoText);
+  expect(action.header).toBe(todoHeader);
+  expect(action.description).toBe(todoDescription);
 });
 
 test('toggleTodo action should return valid Redux action', () => {
