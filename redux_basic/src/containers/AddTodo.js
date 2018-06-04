@@ -5,7 +5,8 @@ import { addTodo } from '../actions/actions'
 import { Col, Form, FormGroup, ControlLabel, FormControl, Button, Panel } from 'react-bootstrap'
 
 let AddTodo = ({ dispatch }) => {
-  let input
+  let inputHeader
+  let inputDescription
 
   return (
     <div>
@@ -17,11 +18,12 @@ let AddTodo = ({ dispatch }) => {
           <Form horizontal 
             onSubmit={e => {
               e.preventDefault()
-              if (!input.value.trim()) {
+              if (!inputHeader.value.trim()) {
                 return
               }
-              dispatch(addTodo(input.value))
-              input.value = ''
+              dispatch(addTodo(inputHeader.value, inputDescription.value))
+              inputHeader.value = ''
+              inputDescription.value = ''
             }}>
             <FormGroup controlId='todo'>
               <Col componentClass={ControlLabel} sm={2}>
@@ -30,7 +32,19 @@ let AddTodo = ({ dispatch }) => {
               <Col sm={9}>
                 <FormControl type='text' placeholder='todo'
                   inputRef={node => {
-                            input = node
+                            inputHeader = node
+                          }}
+                />
+              </Col>
+            </FormGroup>
+            <FormGroup controlId='description'>
+              <Col componentClass={ControlLabel} sm={2}>
+                Description
+              </Col>
+              <Col sm={9}>
+                <FormControl type='text' placeholder='description'
+                  inputRef={node => {
+                            inputDescription = node
                           }}
                 />
               </Col>

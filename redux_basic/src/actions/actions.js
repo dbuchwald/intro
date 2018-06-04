@@ -16,10 +16,11 @@ export const VisibilityFilters = {
  * Action creator fuctions
  */
 
-export const addTodo = (text) => {
+export const addTodo = (header, description) => {
   return {
     type: ADD_TODO,
-    text
+    header,
+    description
   }
 }
 
