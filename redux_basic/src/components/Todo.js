@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ListGroupItem } from 'react-bootstrap';
+import { ListGroupItem, Glyphicon } from 'react-bootstrap';
 
 const Todo = ({ onClick, completed, text }) => (
-  <ListGroupItem
-    onClick={onClick}
-    style={ {
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
+  <ListGroupItem onClick={onClick}>
+    <Glyphicon glyph={completed ? 'ok' : 'remove'}/>
+    &ensp;
     {text}
   </ListGroupItem>
 )
