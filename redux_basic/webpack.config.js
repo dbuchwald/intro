@@ -12,7 +12,15 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      }
+      },
+      { 
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)$/,
+        loader: 'file-loader'
+      }      
     ]
   },
   output: {
