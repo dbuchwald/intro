@@ -91,6 +91,23 @@
       "args": ["--runInBand", "--coverage"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Async Basic - Run the main program",
+      "cwd": "${workspaceFolder}/async_basic",
+      "program": "${workspaceFolder}/async_basic/main.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Async Basic - Run all Jest tests",
+      "program": "${workspaceFolder}/async_basic/node_modules/jest/bin/jest",
+      "cwd": "${workspaceFolder}/async_basic",
+      "args": ["--runInBand", "--coverage"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }

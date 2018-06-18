@@ -1,0 +1,26 @@
+{
+  "name": "async_basic",
+  "version": "1.0.0",
+  "description": "Async and Promises in JS",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbuchwald/intro.git"
+  },
+  "keywords": [
+    "async",
+    "promise"
+  ],
+  "author": "Dawid Buchwald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbuchwald/intro/issues"
+  },
+  "homepage": "https://github.com/dbuchwald/intro#readme",
+  "devDependencies": {
+    "jest": "^23.1.0"
+  }
+}
