@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)$/,
-        loader: 'file-loader'
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }      
     ]
   },
