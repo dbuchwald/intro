@@ -24,6 +24,7 @@ test('getNamedCallbackGreeting function should return valid message for name', d
   main.getNamedCallbackGreeting('name', successCallback, failureCallback);
 });
 
+// This way of writing tests for Promises is not optimal, see below
 test('getNamedPromiseGreeting function should return error message for undefined name', done => {
   function successCallback(message) {
     fail('This should not happen!');
@@ -46,4 +47,41 @@ test('getNamedPromiseGreeting function should return valid message for name', do
     done();
   };
   main.getNamedPromiseGreeting('name').then(successCallback, failureCallback);
+});
+
+//This is the right way to test code using Promises
+test('getNamedPromiseGreeting function should return error message for undefined name - the Promise way', () => {
+  expect.assertions(1);
+  return main.getNamedPromiseGreeting(undefined).catch(
+    message => expect(message).toMatch('Undefined name from Promise')
+  );
+});
+
+test('getNamedPromiseGreeting function should return correct message for name - the Promise way', () => {
+  expect.assertions(1);
+  return main.getNamedPromiseGreeting('name').then(
+    message => expect(message).toBe('Hello from Promise, name!')
+  )
+});
+
+//This is also correct (and maybe a bit more clear)
+test('getNamedPromiseGreeting function should return error message for undefined name - the Promise.rejects way', () => {
+  //expect.assertions(1);
+  return expect(main.getNamedPromiseGreeting(undefined)).rejects.toMatch('Undefined name from Promise');
+});
+
+test('getNamedPromiseGreeting function should return correct message for name - the Promise.resolves way', () => {
+  //expect.assertions(1);
+  return expect(main.getNamedPromiseGreeting('name')).resolves.toBe('Hello from Promise, name!');
+});
+
+//Last but not least - async/await version
+test('getNamedPromiseGreeting function should return error message for undefined name - the Async way', async () => {
+  //expect.assertions(1);
+  await expect(main.getNamedPromiseGreeting(undefined)).rejects.toMatch('Undefined name from Promise');
+});
+
+test('getNamedPromiseGreeting function should return correct message for name - the Async way', async () => {
+  //expect.assertions(1);
+  await expect(main.getNamedPromiseGreeting('name')).resolves.toBe('Hello from Promise, name!');
 });
