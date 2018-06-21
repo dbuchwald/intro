@@ -6,6 +6,16 @@ const getNamedCallbackGreeting = function(name, successCallback, failureCallback
   };
 };
 
+const getDelayedCallbackGreeting = (name, successCallback, failureCallback) => {
+  setTimeout(() => {
+    if (name === undefined) {
+      failureCallback('Undefined name from Delayed Callback');
+    } else {
+      successCallback('Hello from Delayed Callback, ' + name + '!')
+    };
+  }, 500);
+};
+
 const getNamedPromiseGreeting = function(name) {
   return new Promise((resolve, reject) => { 
     if (name === undefined)
@@ -15,8 +25,21 @@ const getNamedPromiseGreeting = function(name) {
   });
 };
 
-module.exports = {
+const getDelayedPromiseGreeting = function(name) {
+  return new Promise((resolve, reject) => { 
+    setTimeout( () => {
+      if (name === undefined)
+        reject('Undefined name from Delayed Promise');
+      else
+        resolve('Hello from Delayed Promise, ' + name + '!');
+    }, 500);
+  });
+};
+
+module.exports = {  
   getNamedCallbackGreeting: getNamedCallbackGreeting,
-  getNamedPromiseGreeting: getNamedPromiseGreeting 
+  getDelayedCallbackGreeting: getDelayedCallbackGreeting,
+  getNamedPromiseGreeting: getNamedPromiseGreeting,
+  getDelayedPromiseGreeting: getDelayedPromiseGreeting
 }
 

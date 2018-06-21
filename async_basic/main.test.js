@@ -24,6 +24,31 @@ test('getNamedCallbackGreeting function should return valid message for name', d
   main.getNamedCallbackGreeting('name', successCallback, failureCallback);
 });
 
+test('getDelayedCallbackGreeting function should return error message for undefined name', done => {
+  function successCallback(message) {
+    fail('This should not happen!');
+    done();
+  };
+  function failureCallback(message) {
+    expect(message).toBe('Undefined name from Delayed Callback');
+    done();
+  };
+  main.getDelayedCallbackGreeting(undefined, successCallback, failureCallback);
+});
+
+test('getDelayedCallbackGreeting function should return valid message for name', done => {
+  function successCallback(message) {
+    expect(message).toBe('Hello from Delayed Callback, name!');
+    done();
+  };
+  function failureCallback(message) {
+    fail('This should not happen!');
+    done();
+  };
+  main.getDelayedCallbackGreeting('name', successCallback, failureCallback);
+});
+
+
 // This way of writing tests for Promises is not optimal, see below
 test('getNamedPromiseGreeting function should return error message for undefined name', done => {
   function successCallback(message) {
@@ -85,3 +110,15 @@ test('getNamedPromiseGreeting function should return correct message for name - 
   //expect.assertions(1);
   await expect(main.getNamedPromiseGreeting('name')).resolves.toBe('Hello from Promise, name!');
 });
+
+//This is also correct (and maybe a bit more clear)
+test('getDelayedPromiseGreeting function should return error message for undefined name - the Promise.rejects way', () => {
+  //expect.assertions(1);
+  return expect(main.getDelayedPromiseGreeting(undefined)).rejects.toMatch('Undefined name from Delayed Promise');
+});
+
+test('getDelayedPromiseGreeting function should return correct message for name - the Promise.resolves way', () => {
+  //expect.assertions(1);
+  return expect(main.getDelayedPromiseGreeting('name')).resolves.toBe('Hello from Delayed Promise, name!');
+});
+
