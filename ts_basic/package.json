@@ -1,0 +1,21 @@
+{
+  "name": "ts_basic",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Introduction to TypeScript",
+  "main": "main.ts",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "ts-node src/main.ts",
+    "build": "tsc"
+  },
+  "author": "Dawid Buchwald",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.3"
+  }
+}

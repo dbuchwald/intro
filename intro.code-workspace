@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "name": "Node Basic",
+      "path": "node_basic"
+    },	
+    {
+      "name": "Babel Mini",
+      "path": "babel_mini"
+    },
+    {
+      "name": "Babel Basic",
+      "path": "babel_basic"
+    },
+    {
+      "name": "Async Basic",
+      "path": "async_basic"
+    },
+    {
+      "name": "Redux Basic",
+      "path": "redux_basic"
+    },
+    {
+      "name": "Webpack Basic",
+      "path": "webpack_basic"
+    },
+    {
+      "name": "TypeScript Basic",
+      "path": "ts_basic"
+    },
+  ],
+}
