@@ -19,7 +19,7 @@
       "name": "Babel Basic - Run all Jest tests",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--runInBand", "--coverage"]
+      "args": ["--runInBand"]
     },
     {
       "type": "node",
@@ -38,7 +38,7 @@
       "name": "Babel Node Basic - Run all Jest tests",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--runInBand", "--coverage"],
+      "args": ["--runInBand"],
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
       "windows": {
         "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node.cmd"

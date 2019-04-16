@@ -7,7 +7,7 @@
       "name": "Redux Basic - Run all Jest tests",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "cwd": "${workspaceFolder}",
-      "args": ["--runInBand", "--coverage"],
+      "args": ["--runInBand"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },

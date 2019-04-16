@@ -6,43 +6,12 @@
       "request": "launch",
       "name": "Webpack Basic - Run the main program",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/src/main.js",
+      "program": "${workspaceFolder}/src/index.js",
       "preLaunchTask": "build",
       "sourceMaps": true,
       "outFiles": [
         "${workspaceFolder}/dest/**.js"
       ]
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Babel Basic - Run all Jest tests",
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--runInBand", "--coverage"]
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Babel Node Basic - Run the main program",
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/src/main.js",
-      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
-      "windows": {
-        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node.cmd"
-      }
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Babel Node Basic - Run all Jest tests",
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--runInBand", "--coverage"],
-      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
-      "windows": {
-        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node.cmd"
-      }
     },
   ]
 }

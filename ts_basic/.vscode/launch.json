@@ -26,8 +26,8 @@
       "request": "launch",
       "name": "TypeScript Node Basic - Run the main program",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/.bin/ts-node",
       "args": ["${workspaceFolder}/src/main.ts"],
+      "runtimeArgs": ["-r", "ts-node/register"],
     },
   ]
 }

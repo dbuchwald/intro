@@ -3,7 +3,7 @@ const getNamedCallbackGreeting = function(name, successCallback, failureCallback
     failureCallback('Undefined name from Callback');
   } else {
     successCallback('Hello from Callback, ' + name + '!')
-  };
+  }
 };
 
 const getDelayedCallbackGreeting = (name, successCallback, failureCallback) => {
@@ -12,7 +12,7 @@ const getDelayedCallbackGreeting = (name, successCallback, failureCallback) => {
       failureCallback('Undefined name from Delayed Callback');
     } else {
       successCallback('Hello from Delayed Callback, ' + name + '!')
-    };
+    }
   }, 500);
 };
 

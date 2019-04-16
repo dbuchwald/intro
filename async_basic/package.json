@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/dbuchwald/intro#readme",
   "devDependencies": {
-    "jest": "^23.1.0"
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "jest": "^24.7.1"
   }
 }
