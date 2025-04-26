@@ -3,6 +3,18 @@
   "configurations": [
     {
       "type": "node",
+      "name": "Run all Jest tests",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/node_basic/jest/bin/jest",
+      "args": [
+        "--runInBand"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      //"internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
       "request": "launch",
       "name": "Node Basic - Run the main program",
       "cwd": "${workspaceFolder}/node_basic",
@@ -103,8 +115,8 @@
       "type": "node",
       "request": "launch",
       "name": "Async Basic - Run all Jest tests",
-      "program": "${workspaceFolder}/async_basic/node_modules/jest/bin/jest",
-      "cwd": "${workspaceFolder}/async_basic",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "cwd": "${workspaceFolder}",
       "args": ["--runInBand", "--coverage"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"

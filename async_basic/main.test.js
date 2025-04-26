@@ -111,14 +111,23 @@ test('getNamedPromiseGreeting function should return correct message for name - 
   await expect(main.getNamedPromiseGreeting('name')).resolves.toBe('Hello from Promise, name!');
 });
 
-//This is also correct (and maybe a bit more clear)
-test('getDelayedPromiseGreeting function should return error message for undefined name - the Promise.rejects way', () => {
-  //expect.assertions(1);
-  return expect(main.getDelayedPromiseGreeting(undefined)).rejects.toMatch('Undefined name from Delayed Promise');
+test('getDataFromAsyncSourcePromise function should fail if connection is undefined', () => {
+  return expect(main.getDataFromAsyncSourcePromise(undefined, 1)).rejects.toMatch('Connection not established yet!');
 });
 
-test('getDelayedPromiseGreeting function should return correct message for name - the Promise.resolves way', () => {
-  //expect.assertions(1);
-  return expect(main.getDelayedPromiseGreeting('name')).resolves.toBe('Hello from Delayed Promise, name!');
+test('getDataFromAsyncSourcePromise function should fail if connection is null', () => {
+  return expect(main.getDataFromAsyncSourcePromise(null, 1)).rejects.toMatch('Connection not established yet!');
 });
 
+test('getDataFromAsyncSourcePromise function should fail if id is undefined', () => {
+  return expect(main.getDataFromAsyncSourcePromise(new Object(), undefined)).rejects.toMatch('Incorrect id provided');
+});
+
+test('getDataFromAsyncSourcePromise function should work if connection and id are valid', () => {
+  return expect(main.getDataFromAsyncSourcePromise(new Object(), 1)).resolves.toEqual({id: 1, data: {key: 1, value:'Name'}});
+});
+
+
+test('getDataFunction should fail if connection is undefined', () => {
+  return expect(main.getDataFunction(undefined, 1)).rejects.toMatch('Connection not established yet!');
+});

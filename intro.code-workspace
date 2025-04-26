@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "name": "Node basic",
+      "path": "node_basic"
+    },
+    {
+      "name": "Babel mini",
+      "path": "babel_mini"
+    },
+    {
+      "name": "Babel basic",
+      "path": "babel_basic"
+    },
+    {
+      "name": "Redux basic",
+      "path": "redux_basic"
+    },
+    {
+      "name": "Webpack basic",
+      "path": "webpack_basic"
+    },
+    {
+      "name": "Async basic",
+      "path": "async_basic"
+    },
+    {
+      "name": "Global settings",
+      "path": "global"
+    }
+  ],
+  "settings": {
+    "jest.debugMode": true,
+    "jest.pathToConfig": "../global/jest.json"
+  }
+}

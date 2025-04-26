@@ -1,0 +1,4 @@
+{
+  "roots": ["../node_basic", "../babel_mini", "../babel_basic", "../redux_basic", "../webpack_basic", "../async_basic"],
+  "verbose": true
+}

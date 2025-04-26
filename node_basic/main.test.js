@@ -1,4 +1,4 @@
-const main = require('./main.js');
+const main = require('./main');
 
 test('getGreeting function should return valid greeting', () => {
   const greeting = main.getGreeting();
